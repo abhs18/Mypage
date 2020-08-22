@@ -4,26 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-  <link rel="stylesheet" href="style.css">
 <title>Insert title here</title>
 </head>
 <body bgcolor="cyan">
 <form action="Login" method="post">
-      <div class="user-box">
-        <input type="text" name="uname" required="">
-        <label>Username</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="pass" required="">
-        <label>Password</label>
-      </div>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
+Enter usernmae:<input type="text" name="uname"><br>
+Enter password:<input type="password" name="pass"><br>
 <input type="submit" value="login">
 </form>
 <form action="signup.jsp">
