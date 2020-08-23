@@ -22,7 +22,7 @@
       </div>
       <div class="user-box">
         <input type="password" name="pass" required="">
-        <label>Password</label>
+        <label>Password</label> 
       </div>
       <input class="loginBtn" type="submit" value="ENTER">
     </form>
