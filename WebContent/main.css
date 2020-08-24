@@ -146,11 +146,11 @@ body {
   text-align: center;
 }
 
-.signup-box .user-box {
+.signup-box .sb-user-box {
   position: relative;
 }
 
-.signup-box .user-box input {
+.signup-box .sb-user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -161,7 +161,7 @@ body {
   outline: none;
   background: transparent;
 }
-.signup-box .user-box label {
+.signup-box .sb-user-box label {
   position: absolute;
   top:0;
   left: 0;
@@ -172,8 +172,8 @@ body {
   transition: .5s;
 }
 
-.signup-box .user-box input:focus ~ label,
-.signup-box .user-box input:valid ~ label {
+.signup-box .sb-user-box input:focus ~ label,
+.signup-box .sb-user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #03e9f4;
@@ -186,7 +186,7 @@ body {
   background: #57BEA3;
   border: 0;
   border-radius: 10px;
-  height: 40px;
+  height: 45px;
   width: 200px;
   color: #0A2C38;
   font-size: 20px;
