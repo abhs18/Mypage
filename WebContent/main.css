@@ -39,6 +39,11 @@ body {
   text-align: center;
 }
 
+.loginBtn:hover {
+  background-color: #01B9FF;
+  color: white;
+}
+
 .svg{
   position:absolute;
 }
@@ -49,7 +54,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 500px;
   height: 350px;
   padding: 40px;
   transform: translate(-50%, -50%);
@@ -103,4 +108,13 @@ body {
   left: 0;
   color: #03e9f4;
   font-size: 12px;
+}
+
+.signupBtn {
+  color: #57BEA3 ;
+  font-size: 20px;
+}
+
+.signupBtn:hover {
+  color: #01B9FF;
 }
