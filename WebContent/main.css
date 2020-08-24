@@ -110,12 +110,12 @@ body {
   font-size: 12px;
 }
 
-.signupBtn {
+  .signupTxt {
   color: #57BEA3 ;
   font-size: 20px;
 }
 
-.signupBtn:hover {
+.signupTxt:hover {
   color: #01B9FF;
 }
 
@@ -178,4 +178,23 @@ body {
   left: 0;
   color: #03e9f4;
   font-size: 12px;
+}
+
+.signupBtn {
+  position: absolute;
+  left: 30%;
+  background: #57BEA3;
+  border: 0;
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+  color: #0A2C38;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.signupBtn:hover {
+  background-color: #01B9FF;
+  color: white;
 }

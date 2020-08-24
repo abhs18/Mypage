@@ -29,7 +29,7 @@
             <input class="loginBtn" type="submit" value="ENTER">
         </form>
 
-    <a class="signupBtn" href="signup.jsp">Sign up</a>
+    <a class="signupTxt" href="signup.jsp">Sign up</a>
 
     </body>
 </html>
