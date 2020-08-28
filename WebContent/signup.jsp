@@ -18,10 +18,7 @@
                 <input type="text" name="email" required="">
                 <label>Enter Email id</label>
             </div>
-            <div class="sb-user-box">
-                <input type="password" name="pass" required="">
-                <label>Choose Your Password</label>
-            </div>
+
             <div class="sb-user-box">
                 <input type="text" name="fname" required="">
                 <label> Enter First Name</label>
@@ -29,6 +26,10 @@
             <div class="sb-user-box">
                 <input type="text" name="lname" required="">
                 <label> Enter Last Name</label>
+            </div>
+            <div class="sb-user-box">
+                <input type="password" name="pass" required="">
+                <label>Choose Your Password</label>
             </div>
             <input class="signupBtn" type="submit" value="SUBMIT">
         </form>
