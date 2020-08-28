@@ -19,22 +19,20 @@ public class Login extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	 String uname=request.getParameter("uname");
+	 String email=request.getParameter("email");
 	 String pass=request.getParameter("pass");
 	 Ldao obj=new Ldao();
-      	 if(obj.check(uname,pass))
+      	 if(obj.check(email,pass))
       	 {
       		 HttpSession session=request.getSession();
-    		 session.setAttribute("username",uname);
+    		 session.setAttribute("username",email);
     		 response.sendRedirect("welcome.jsp");
-
-				  
-      	 }
-      	/* else
+          }
+      	 else
       	 {
       		response.sendRedirect("login.jsp");
       		System.out.println("sahi daalo");
-      	 }*/
+      	 }
 
 
 	}

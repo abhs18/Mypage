@@ -14,8 +14,15 @@ if(session.getAttribute("username")==null)
 	response.sendRedirect("login.jsp");
 
 %>
-welcome bhailog majama ${username}
+<h1>
+Welcome ${username}
+</h1>
+<form action="Update_val" method="post">
+Enter hackerrank today score:<input type="text" name="hack"><br>
+Enter codechef today score:<input type="text" name="code"><br>
+<input type="submit" value="ENTER">
 
+</form>
 <a href="videos.jsp">Videos</a>>
 <form action="Logout" method="post">
 <input type="submit" value="Logout">

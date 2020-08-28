@@ -15,8 +15,8 @@
         <h2>Creating New Account!</h2>
         <form action="Signup" method="post">
             <div class="sb-user-box">
-                <input type="text" name="uname" required="">
-                <label>Select Your Username</label>
+                <input type="text" name="email" required="">
+                <label>Enter Email id</label>
             </div>
             <div class="sb-user-box">
                 <input type="password" name="pass" required="">
@@ -24,11 +24,11 @@
             </div>
             <div class="sb-user-box">
                 <input type="text" name="fname" required="">
-                <label>First Name</label>
+                <label> Enter First Name</label>
             </div>
             <div class="sb-user-box">
                 <input type="text" name="lname" required="">
-                <label>Last Name</label>
+                <label> Enter Last Name</label>
             </div>
             <input class="signupBtn" type="submit" value="SUBMIT">
         </form>

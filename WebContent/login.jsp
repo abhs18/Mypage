@@ -17,8 +17,8 @@
       <h2>Get Started!</h2>
         <form action="Login" method="post">
             <div class="user-box">
-                <input type="text" name="uname" required="">
-                <label>Username</label>
+                <input type="text" name="email" required="">
+                <label>Email_id</label>
             </div>
 
             <div class="user-box">

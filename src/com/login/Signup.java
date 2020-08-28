@@ -14,10 +14,12 @@ public class Signup extends HttpServlet
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String u_name=request.getParameter("uname");
+		 String u_mail=request.getParameter("email");
 		 String u_pass=request.getParameter("pass");
+		 String u_fname=request.getParameter("fname");
+		 String u_lname=request.getParameter("lname");
 		 Ldao obj=new Ldao();
-		 obj.insert(u_name, u_pass);
+		 obj.insert(u_mail, u_pass,u_fname,u_lname);
 		 response.sendRedirect("login.jsp");
 		
 	}
