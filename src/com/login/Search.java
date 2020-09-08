@@ -64,7 +64,7 @@ public class Search extends HttpServlet {
 		{
 		//	 HttpSession session=request.getSession();
     		 
-			response.sendRedirect("welcome.jsp");
+			response.sendRedirect("videos.jsp");
 		}
 			
 		   

@@ -10,7 +10,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome</title>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
+ </style>
+ <link href="${pageContext.request.contextPath}/main.css" rel="stylesheet" >
 </head>
 <body>
 
@@ -20,15 +24,15 @@ if(session.getAttribute("username")==null)
 	response.sendRedirect("login.jsp");
 
 %>
-<h1>
+<h1 style="text-align:center;color:powderblue;">
 Welcome ${username}
 </h1>
-<form action="Update_val" method="post">
+<form action="Update_val" method="post" style="color:powderblue;">
 Enter hackerrank today score:<input type="text" name="hack"><br>
 Enter codechef today score:<input type="text" name="code"><br>
 <input type="submit" value="ENTER">
 </form>
-<form action="Search" method="post">
+<form action="Search" method="post" style="color:powderblue;">
 Search email id:<input type="text" name="id">
 <input type="submit" value="Enter">
 </form>
@@ -46,7 +50,7 @@ Connection con = null;
 Statement st = null;
 ResultSet rs = null;
 %>
-<table border="1">
+<table border="1" bgcolor="powderblue">
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -58,13 +62,37 @@ ResultSet rs = null;
   <%
   try{
 	  con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
+	  Statement st1=con.createStatement();
+	  String query1="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id="+(char)34+mail+(char)34;
+	  ResultSet rs1=st1.executeQuery(query1);
+	  rs1.next();
+  %>
+   <tr>
+<td><%=rs1.getString(1)%></td>
+<td><%=rs1.getString(2)%></td>
+<td><%=rs1.getInt(3)%></td>
+<td><%=rs1.getInt(4)%></td>
+<td><%=rs1.getInt(5)%></td>
+<td><%=rs1.getInt(6)%></td>
+</tr>
+<%
+st1.close();
+con.close();
+ }
+ catch(Exception e){
+		 System.out.println(e);}
+%>
+  <%
+  try{
+	  con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
 	  st=con.createStatement();
+	 
 	  String query="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id in\r\n" + 
-				"(select f_mail from friend where my_mail="+(char)34 +mail+(char)34+")"+"or\r\n"+ 
-				"email_id="+(char)34+mail+(char)34;	  
+				"(select f_mail from friend where my_mail="+(char)34 +mail+(char)34+")";
 	  rs= st.executeQuery(query);
+	 
 	  while(rs.next())
-	  {
+	  { 
   %>
   <tr>
 <td><%=rs.getString(1)%></td>
