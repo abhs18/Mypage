@@ -81,7 +81,7 @@
         	  ResultSet rs1=st1.executeQuery(query1);
         	  rs1.next();
       %>
-
+      <tbody>
       <tr>
         <td><%=rs1.getString(1)%></td>
         <td><%=rs1.getString(2)%></td>
@@ -127,6 +127,7 @@
       catch(Exception e){
 		      System.out.println(e);}
       %>
+      <tbody>
       </table>
 
       <form action="Logout" method="post">
