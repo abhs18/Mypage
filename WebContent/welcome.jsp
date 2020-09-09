@@ -127,7 +127,7 @@
       catch(Exception e){
 		      System.out.println(e);}
       %>
-      <tbody>
+      </tbody>
       </table>
 
       <form action="Logout" method="post">
