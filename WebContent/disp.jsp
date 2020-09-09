@@ -4,7 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>User found</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
+ </style>
+ <link href="${pageContext.request.contextPath}/main.css" rel="stylesheet" >
 </head>
 <body>
 <%
@@ -12,13 +16,13 @@ response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 if(session.getAttribute("username")==null)
 	response.sendRedirect("login.jsp");
 %>
-<h1>
-FOUND<br>
+<h1 style="color:powderblue;">
+USER FOUND<br>
 ${uid}<br>
 ${u_fname}
 ${u_lname}<br>
 </h1>
-<table>
+<table style="color:powderblue;">
   <tr>
     <th>Hackerrank today score</th>
     <th>Hackerrank total score</th>
