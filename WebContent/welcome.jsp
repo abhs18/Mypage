@@ -1,118 +1,146 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="com.logdao.Ldao"%>
+
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Welcome</title>
- <style>
+  <html>
+    <head>
+      <meta charset="ISO-8859-1">
+      <title>Welcome</title>
+ <%-- <style>
  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
- </style>
- <link href="${pageContext.request.contextPath}/main.css" rel="stylesheet" >
-</head>
-<body>
+ </style> --%>
+ <%-- <link href="${pageContext.request.contextPath}/main.css" rel="stylesheet" > --%>
+      <link href="${pageContext.request.contextPath}/img/mdb-favicon.ico" type="image/x-icon" rel="icon" >
+      <style>
+        @import url('https://use.fontawesome.com/releases/v5.11.2/css/all.css');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+      </style>
+      <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" >
+      <link href="${pageContext.request.contextPath}/css/mdb.min.css" rel="stylesheet" >
+      <link href="${pageContext.request.contextPath}css/addons/datatables.min.css" rel="stylesheet" >
+    </head>
 
-<%
-response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
-if(session.getAttribute("username")==null)
-	response.sendRedirect("login.jsp");
+    <body>
 
-%>
-<h1 style="text-align:center;color:powderblue;">
-Welcome ${username}
-</h1>
-<form action="Update_val" method="post" style="color:powderblue;">
-Enter hackerrank today score:<input type="text" name="hack"><br>
-Enter codechef today score:<input type="text" name="code"><br>
-<input type="submit" value="ENTER">
-</form>
-<form action="Search" method="post" style="color:powderblue;">
-Search email id:<input type="text" name="id">
-<input type="submit" value="Enter">
-</form>
-<a href="videos.jsp">Videos</a>
+      <%
+        response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+        if(session.getAttribute("username")==null)
+  	      response.sendRedirect("login.jsp");
+      %>
 
-<%
-String mail=(String)session.getAttribute("username");
+      <h1 style="text-align:center;color:powderblue;"> Welcome ${username} </h1>
 
-try {
-Class.forName("com.mysql.jdbc.Driver");
-} catch (Exception e) {
-	System.out.println(e);
-}
-Connection con = null;
-Statement st = null;
-ResultSet rs = null;
-%>
-<table border="1" bgcolor="powderblue">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Hackerrank today score</th>
-    <th>Hackerrank total score</th>
-    <th>Codechef today score</th>
-    <th>Codechef total score</th>
-  </tr>
-  <%
-  try{
-	  con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
-	  Statement st1=con.createStatement();
-	  String query1="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id="+(char)34+mail+(char)34;
-	  ResultSet rs1=st1.executeQuery(query1);
-	  rs1.next();
-  %>
-   <tr>
-<td><%=rs1.getString(1)%></td>
-<td><%=rs1.getString(2)%></td>
-<td><%=rs1.getInt(3)%></td>
-<td><%=rs1.getInt(4)%></td>
-<td><%=rs1.getInt(5)%></td>
-<td><%=rs1.getInt(6)%></td>
-</tr>
-<%
-st1.close();
-con.close();
- }
- catch(Exception e){
-		 System.out.println(e);}
-%>
-  <%
-  try{
-	  con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
-	  st=con.createStatement();
-	 
-	  String query="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id in\r\n" + 
-				"(select f_mail from friend where my_mail="+(char)34 +mail+(char)34+")";
-	  rs= st.executeQuery(query);
-	 
-	  while(rs.next())
-	  { 
-  %>
-  <tr>
-<td><%=rs.getString(1)%></td>
-<td><%=rs.getString(2)%></td>
-<td><%=rs.getInt(3)%></td>
-<td><%=rs.getInt(4)%></td>
-<td><%=rs.getInt(5)%></td>
-<td><%=rs.getInt(6)%></td>
-</tr>
-<%
-	  }
-  st.close();
-con.close();
-  }
-  catch(Exception e){
-		 System.out.println(e);}
-%>
-  </table>
-<form action="Logout" method="post">
-<input type="submit" value="Logout">
-</form>
+      <form action="Update_val" method="post" style="color:powderblue;">
+        Enter hackerrank today score:<input type="text" name="hack"><br>
+        Enter codechef today score:<input type="text" name="code"><br>
+        <input type="submit" value="ENTER">
+      </form>
+
+      <form action="Search" method="post" style="color:powderblue;">
+        Search email id:<input type="text" name="id">
+        <input type="submit" value="Enter">
+      </form>
+      <a href="videos.jsp">Videos</a>
+
+      <%
+        String mail=(String)session.getAttribute("username");
+
+        try {
+          Class.forName("com.mysql.jdbc.Driver");
+        }
+        catch (Exception e) {
+	         System.out.println(e);
+        }
+        Connection con = null;
+        Statement st = null;
+        ResultSet rs = null;
+      %>
+
+      <table border="1" bgcolor="powderblue">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Hackerrank today score</th>
+          <th>Hackerrank total score</th>
+          <th>Codechef today score</th>
+          <th>Codechef total score</th>
+        </tr>
+
+      <%
+        try{
+        	  con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
+        	  Statement st1=con.createStatement();
+        	  String query1="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id="+(char)34+mail+(char)34;
+        	  ResultSet rs1=st1.executeQuery(query1);
+        	  rs1.next();
+      %>
+
+      <tr>
+        <td><%=rs1.getString(1)%></td>
+        <td><%=rs1.getString(2)%></td>
+        <td><%=rs1.getInt(3)%></td>
+        <td><%=rs1.getInt(4)%></td>
+        <td><%=rs1.getInt(5)%></td>
+        <td><%=rs1.getInt(6)%></td>
+      </tr>
+
+      <%
+        st1.close();
+        con.close();
+      }
+      catch(Exception e){
+		      System.out.println(e);}
+      %>
+
+      <%
+      try{
+	       con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
+	       st=con.createStatement();
+
+	       String query="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id in\r\n" + "(select f_mail from friend where my_mail="+(char)34 +mail+(char)34+")";
+	       rs= st.executeQuery(query);
+
+	       while(rs.next())
+	       {
+      %>
+
+            <tr>
+              <td><%=rs.getString(1)%></td>
+              <td><%=rs.getString(2)%></td>
+              <td><%=rs.getInt(3)%></td>
+              <td><%=rs.getInt(4)%></td>
+              <td><%=rs.getInt(5)%></td>
+              <td><%=rs.getInt(6)%></td>
+            </tr>
+      <%
+      	   }
+           st.close();
+           con.close();
+      }
+      catch(Exception e){
+		      System.out.println(e);}
+      %>
+      </table>
+
+      <form action="Logout" method="post">
+        <input type="submit" value="Logout">
+      </form>
+
+      <script type="text/javascript" src="${pageContext.request.contextPath}js/jquery.min.js"></script>
+      <script type="text/javascript" src="${pageContext.request.contextPath}js/popper.min.js"></script>
+
+      <script type="text/javascript" src="${pageContext.request.contextPath}js/bootstrap.min.js"></script>
+
+      <script type="text/javascript" src="${pageContext.request.contextPath}js/mdb.min.js"></script>
+
+      <script type="text/javascript" src="${pageContext.request.contextPath}js/index.js"></script>
+      <script type="text/javascript" src="${pageContext.request.contextPath}js/addons/datatables.min.js"></script>
+
+
 </body>
 </html>
