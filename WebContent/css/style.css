@@ -21,3 +21,13 @@ bottom: .5em;
   left: 10%; */
 
 }
+
+.serchBox {
+  position: absolute;
+  border: 2px;
+  border-color: black;
+  top: 70px;
+  left: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}

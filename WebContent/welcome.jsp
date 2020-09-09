@@ -35,17 +35,19 @@
 
       <h1 style="text-align:center;color:powderblue;"> Welcome ${username} </h1>
 
-      <form action="Update_val" method="post" style="color:powderblue;">
-        Enter hackerrank today score:<input type="text" name="hack"><br>
-        Enter codechef today score:<input type="text" name="code"><br>
-        <input type="submit" value="ENTER">
-      </form>
+      <div class="serchBox">
+        <form action="Update_val" method="post" style="color:powderblue;">
+          <input type="text" placeholder="hackerrank today score" name="hack"><br>
+          <input type="text" placeholder="codechef today score" name="code"><br>
+          <input type="submit" value="ENTER">
+        </form>
 
-      <form action="Search" method="post" style="color:powderblue;">
-        Search email id:<input type="text" name="id">
-        <input type="submit" value="Enter">
-      </form>
-      <a href="videos.jsp">Videos</a>
+        <form action="Search" method="post" style="color:powderblue;">
+          <input type="text" placeholder="Search email id" name="id">
+          <input type="submit" value="Enter">
+        </form>
+        <a href="videos.jsp">Videos</a>
+      </div>
 
       <%
         String mail=(String)session.getAttribute("username");
