@@ -33,7 +33,7 @@
   	      response.sendRedirect("login.jsp");
       %>
 
-      <h1 style="text-align:center;color:powderblue;"> Welcome ${username} </h1>
+      <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
 
       <form action="Update_val" method="post" style="color:powderblue;">
         Enter hackerrank today score:<input type="text" name="hack"><br>
