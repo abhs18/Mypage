@@ -61,15 +61,17 @@
         ResultSet rs = null;
       %>
 
-      <table border="1" bgcolor="powderblue">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Hackerrank today score</th>
-          <th>Hackerrank total score</th>
-          <th>Codechef today score</th>
-          <th>Codechef total score</th>
-        </tr>
+      <table  id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="70%">
+        <thead>
+          <tr>
+            <th class="th-sm">First Name</th>
+            <th class="th-sm">Last Name</th>
+            <th class="th-sm">Hackerrank today score</th>
+            <th class="th-sm">Hackerrank total score</th>
+            <th class="th-sm">Codechef today score</th>
+            <th class="th-sm">Codechef total score</th>
+          </tr>
+        </thead>
 
       <%
         try{
