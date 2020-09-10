@@ -10,7 +10,9 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
 bottom: .5em;
 }
-
+body{
+  width: 70%;
+}
 .tbprp{
   text-align: center;
   /* position: absolute; */

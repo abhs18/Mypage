@@ -64,7 +64,7 @@
         ResultSet rs = null;
       %>
 
-      <table  id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="70%">
+      <table  id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="100%">
         <thead>
           <tr>
             <th class="th-sm">First Name</th>
