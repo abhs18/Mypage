@@ -11,10 +11,7 @@
     <head>
       <meta charset="ISO-8859-1">
       <title>Welcome</title>
- <%-- <style>
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
- </style> --%>
- <%-- <link href="${pageContext.request.contextPath}/main.css" rel="stylesheet" > --%>
+ 
       <link href="${pageContext.request.contextPath}/img/mdb-favicon.ico" type="image/x-icon" rel="icon" >
       <style>
         @import url('https://use.fontawesome.com/releases/v5.11.2/css/all.css');
@@ -22,7 +19,8 @@
       </style>
       <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" >
       <link href="${pageContext.request.contextPath}/css/mdb.min.css" rel="stylesheet" >
-      <link href="${pageContext.request.contextPath}css/addons/datatables.min.css" rel="stylesheet" >
+      <link href="${pageContext.request.contextPath}/css/addons/datatables.min.css" rel="stylesheet" >
+      <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" >
     </head>
 
     <body>
@@ -35,6 +33,7 @@
 
       <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
 
+<<<<<<< Updated upstream
       <div class="serchBox">
         <form action="Update_val" method="post">
           <input type="text" placeholder="hackerrank today score" name="hack"><br>
@@ -46,11 +45,25 @@
           <input type="text" placeholder="Search email id" name="id">
           <input type="submit" value="Enter">
         </form>
+=======
+      <%-- <div class="serchBox"> --%>
+      <form action="Update_val" method="post" class="searchBox">
+        <input type="text" placeholder="hackerrank today score" name="hack"><br>
+        <input type="text" placeholder="codechef today score" name="code"><br>
+        <input type="submit" value="ENTER">
+      </form>
+
+      <form action="Search" method="post" class="searchBox">
+        <input type="text" placeholder="Search email id" name="id">
+        <input type="submit" value="Enter">
+      </form>
+>>>>>>> Stashed changes
         <a href="videos.jsp">Videos</a>
       </div>
 
       <%
         String mail=(String)session.getAttribute("username");
+      
 
         try {
           Class.forName("com.mysql.jdbc.Driver");
