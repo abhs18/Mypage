@@ -24,10 +24,11 @@ bottom: .5em;
 
 .serchBox {
   position: absolute;
-  border: 2px;
-  border-color: black;
   top: 70px;
   left: 75%;
+  border: 2px;
+  border-color: black;
+
   margin-left: auto;
   margin-right: auto;
 }
