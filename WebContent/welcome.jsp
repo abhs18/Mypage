@@ -33,7 +33,7 @@
 
       <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
 
-<<<<<<< Updated upstream
+
       <div class="serchBox">
         <form action="Update_val" method="post">
           <input type="text" placeholder="hackerrank today score" name="hack"><br>
@@ -45,19 +45,7 @@
           <input type="text" placeholder="Search email id" name="id">
           <input type="submit" value="Enter">
         </form>
-=======
-      <%-- <div class="serchBox"> --%>
-      <form action="Update_val" method="post" class="searchBox">
-        <input type="text" placeholder="hackerrank today score" name="hack"><br>
-        <input type="text" placeholder="codechef today score" name="code"><br>
-        <input type="submit" value="ENTER">
-      </form>
 
-      <form action="Search" method="post" class="searchBox">
-        <input type="text" placeholder="Search email id" name="id">
-        <input type="submit" value="Enter">
-      </form>
->>>>>>> Stashed changes
         <a href="videos.jsp">Videos</a>
       </div>
 
