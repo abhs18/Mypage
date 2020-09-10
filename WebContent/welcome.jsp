@@ -11,7 +11,7 @@
     <head>
       <meta charset="ISO-8859-1">
       <title>Welcome</title>
- 
+
       <link href="${pageContext.request.contextPath}/img/mdb-favicon.ico" type="image/x-icon" rel="icon" >
       <style>
         @import url('https://use.fontawesome.com/releases/v5.11.2/css/all.css');
@@ -34,7 +34,7 @@
       <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
 
 
-      <div class="serchBox">
+      <div class="searchBox">
         <form action="Update_val" method="post">
           <input type="text" placeholder="hackerrank today score" name="hack"><br>
           <input type="text" placeholder="codechef today score" name="code"><br>
@@ -51,7 +51,7 @@
 
       <%
         String mail=(String)session.getAttribute("username");
-      
+
 
         try {
           Class.forName("com.mysql.jdbc.Driver");
