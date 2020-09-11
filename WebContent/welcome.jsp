@@ -34,16 +34,16 @@
       <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
 
 
-      <div class="searchBox">
+        <form action="Search" method="post" class="searchMail">
+          <input type="text" placeholder="Search email id" name="id" id="searchemailid">
+          <input type="button" value="Enter" id="searchemailidBTN">
+        </form>
+
+        <div class="searchBox">
         <form action="Update_val" method="post">
           <input type="text" placeholder="hackerrank today score" name="hack"><br>
           <input type="text" placeholder="codechef today score" name="code"><br>
           <input type="submit" value="ENTER">
-        </form>
-
-        <form action="Search" method="post">
-          <input type="text" placeholder="Search email id" name="id">
-          <input type="submit" value="Enter">
         </form>
 
         <a href="videos.jsp">Videos</a>
@@ -66,7 +66,7 @@
 
       <table  id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="100%">
         <thead>
-          <tr>
+          <tr class="trx">
             <th class="th-sm">First Name</th>
             <th class="th-sm">Last Name</th>
             <th class="th-sm">Hackerrank today score</th>
