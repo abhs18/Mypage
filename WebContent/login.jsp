@@ -4,7 +4,7 @@
 <html>
     <head>
       <meta charset="ISO-8859-1">
-      <title>Log In</title>
+      <title>Coder'Stack</title>
 
       <%-- <link rel="stylesheet" href="../style.css" type="text/css"> --%>
       <style>
