@@ -21,6 +21,7 @@ public class Show extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
 		String mail=(String)session.getAttribute("username");
+		 //String Name=(String)session.getAttribute("Name");
 		String query="select f_name,l_name,hac_daily,hac_total,code_daily,code_total from proj where email_id in\r\n" + 
 				"(select f_mail from friend where my_mail="+(char)34 +mail+(char)34+")"+"or\r\n"+ 
 				"email_id="+(char)34+mail+(char)34;
