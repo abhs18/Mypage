@@ -16,19 +16,21 @@
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
+  <!-- <link rel="stylesheet" href="main.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link href="css/addons/datatables.min.css" rel="stylesheet">
+
 
 </head>
 <body>
 
   <!-- Start your project here-->
-  <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
+  <h1 class="headerstyle"> Welcome ${username} </h1>
 
   <div class="searchMail">
     <form action="Search" method="post">
-      <input type="text" placeholder="Search email id" name="id" id="searchemailid">
-      <input type="button" value="Enter" id="searchemailidBTN">
+      <input type="text" placeholder="Add New Friend" name="id" id="searchemailid"><&nbsp>
+      <input type="button" value="Search" id="searchemailidBTN">
     </form>
   </div>
 
@@ -45,7 +47,7 @@
   <table id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="100%">
     <thead>
       <tr>
-        <th class="th-sm thx">First Name</th>
+        <th class="th-sm">First Name</th>
         <th class="th-sm">Last Name</th>
         <th class="th-sm">Hackerrank today score</th>
         <th class="th-sm">Hackerrank total score</th>

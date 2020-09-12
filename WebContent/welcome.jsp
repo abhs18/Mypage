@@ -10,7 +10,7 @@
   <html>
     <head>
       <meta charset="ISO-8859-1">
-      <title>Welcome</title>
+      <title>Coder'Stack</title>
 
       <link href="${pageContext.request.contextPath}/img/mdb-favicon.ico" type="image/x-icon" rel="icon" >
       <style>
@@ -31,23 +31,24 @@
   	      response.sendRedirect("login.jsp");
       %>
 
-      <h1 style="text-align:left; padding-left:100px; color:powderblue;"> Welcome ${username} </h1>
+      <h1 class="headerstyle"> Welcome ${username} </h1>
 
-
-        <form action="Search" method="post" class="searchMail">
-          <input type="text" placeholder="Search email id" name="id" id="searchemailid">
-          <input type="button" value="Enter" id="searchemailidBTN">
+      <div class="searchMail">
+        <form action="Search" method="post">
+          <input type="text" placeholder="Add New Friend" name="id" id="searchemailid"><&nbsp>
+          <input type="button" value="Search" id="searchemailidBTN">
         </form>
-
-        <div class="searchBox">
-        <form action="Update_val" method="post">
-          <input type="text" placeholder="hackerrank today score" name="hack"><br>
-          <input type="text" placeholder="codechef today score" name="code"><br>
-          <input type="submit" value="ENTER">
-        </form>
-
-        <a href="videos.jsp">Videos</a>
       </div>
+
+      <div class="searchBox">
+      <form action="Update_val" method="post">
+        <input type="text" placeholder="hackerrank today score" name="hack"><br>
+        <input type="text" placeholder="codechef today score" name="code"><br>
+        <input type="submit" value="ENTER">
+      </form>
+
+      <a href="videos.jsp">Videos</a>
+    </div>
 
       <%
         String mail=(String)session.getAttribute("username");
