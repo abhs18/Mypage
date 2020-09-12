@@ -31,7 +31,7 @@
   	      response.sendRedirect("login.jsp");
       %>
 
-      <h1 class="headerstyle"> Welcome ${username} </h1>
+      <h1 class="headerstyle"> Welcome! "<em>${username}</em>", </h1>
 
       <div class="searchMail">
         <form action="Search" method="post">
