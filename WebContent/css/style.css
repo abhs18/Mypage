@@ -12,9 +12,14 @@ bottom: .5em;
 }
 
 body{
-  background: rgb(20,30,48);
+
+  /*background: rgb(20,30,48);
   background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(16,37,52,1) 30%, rgba(16,63,80,1) 56%, rgba(21,72,90,1) 80%, rgba(34,100,124,1) 100%);
-  margin-left: 30px;
+ */
+ 
+  background-color: #0E313D;
+  margin-left: 30px;	
+
   width: 70%;
   color: #01B9FF;
 

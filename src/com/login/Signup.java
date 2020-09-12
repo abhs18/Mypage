@@ -16,7 +16,10 @@ public class Signup extends HttpServlet
 		 String u_pass=request.getParameter("pass");
 		 String u_fname=request.getParameter("fname");
 		 String u_lname=request.getParameter("lname");
-		
+
+		 HttpSession session=request.getSession();
+		 session.setAttribute("Name",u_fname);
+
 		 Ldao obj=new Ldao();
 		 obj.insert(u_mail, u_pass,u_fname,u_lname);
 		 response.sendRedirect("login.jsp");

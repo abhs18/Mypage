@@ -12,6 +12,27 @@
       </style>
       <link href="${pageContext.request.contextPath}/main.css" rel="stylesheet" >
       <link href="${pageContext.request.contextPath}/ntwk.css" rel="stylesheet" >
+      <script type="text/javascript">
+      function validate()
+      {
+    	  var name=document.getElementById("text1").value;
+    	  
+    	  var regex=/^([a-zA-Z0-9]+)@gmail.com$/;
+    	//var regex=/^[a-z]$/
+    	  if(!regex.test(name))
+    		  {
+    		       alert("invalid email");
+ 		           return false;
+    		  }
+    	  else
+    		  {
+    		     return true;
+    		  }
+    	  
+    	  
+      }
+      
+      </script>
     </head>
 
     <body>
@@ -19,10 +40,11 @@
         <canvas id="demo-canvas"></canvas>
         <div class="login-box">
           <h2>Get Started!</h2>
-          <form action="Login" method="post">
+          <form  onsubmit=" return validate()" action="Login" method="post">
             <div class="user-box">
-              <input type="text" name="email" required="">
-              <label>Email_id</label>
+              <input id="text1" type="text" name="email" required="">
+              <label>Email</label>
+             <!--  <label id="eid" style="color:red;visibility:hidden">invalid</label>-->
             </div>
             <div class="user-box">
               <input type="password" name="pass" required="">

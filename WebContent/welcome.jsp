@@ -29,13 +29,14 @@
         response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
         if(session.getAttribute("username")==null)
   	      response.sendRedirect("login.jsp");
+        String Name=(String)session.getAttribute("Name");
       %>
 
       <h1 class="headerstyle"> Welcome! "<em>${username}</em>", </h1>
 
       <div class="searchMail">
         <form action="Search" method="post">
-          <input type="text" placeholder="Add New Friend" name="id" id="searchemailid"><&nbsp>
+          <input type="text" placeholder="Add New Friend" name="id" id="searchemailid">&nbsp
           <input type="submit" id="searchemailidBTN" value="Search">
         </form>
       </div>
@@ -50,11 +51,12 @@
       <a href="videos.jsp">Videos</a>
     </div>
 
+
       <%
         String mail=(String)session.getAttribute("username");
 
 
-        try {
+       try {
           Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e) {
