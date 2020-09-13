@@ -12,22 +12,11 @@ bottom: .5em;
 }
 
 body{
-<<<<<<< HEAD
-  /* background: rgb(20,30,48); */
-  /* background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(16,37,52,1) 30%, rgba(16,63,80,1) 56%, rgba(21,72,90,1) 80%, rgba(34,100,124,1) 100%); */
-  background-color: #0E313D;
-  margin-left: 30px;
-=======
 
-
-  /*background: rgb(20,30,48);
-  background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(16,37,52,1) 30%, rgba(16,63,80,1) 56%, rgba(21,72,90,1) 80%, rgba(34,100,124,1) 100%);
- */
- 
   background-color: #0E313D;
   margin-left: 30px;	
 
->>>>>>> 92b239653623d2a29683ed92ee069916527dec70
+
   width: 70%;
   color: #01B9FF;
 
