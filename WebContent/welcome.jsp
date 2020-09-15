@@ -36,7 +36,6 @@
 
       <div class="searchMail">
         <form action="Search" method="post">
-          <input type="text" placeholder="Add New Friend" name="id" id="searchemailid">&nbsp
           <input type="submit" id="searchemailidBTN" value="Search">
         </form>
       </div>
