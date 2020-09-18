@@ -32,12 +32,13 @@
         String Name=(String)session.getAttribute("Name");
       %>
 
-      <h1 class="headerstyle"> Welcome! <em>${username}</em>, </h1>
+      <h1 class="headerstyle"> Welcome! <em>Abhay</em>, </h1>
 
       <div class="searchMail">
         <form action="Search" method="post">
           <input type="text" placeholder="Add New Friend" name="id" id="searchemailid">&nbsp &nbsp
           <input type="submit" id="searchemailidBTN" value="Search">
+          
         </form>
       </div>
 
