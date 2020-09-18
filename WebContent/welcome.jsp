@@ -41,14 +41,15 @@
         </form>
       </div>
 
+      <div class="rectangle">  </div>
+      <h2 class="hdAddBox">Enter New Score!</h2>
       <div class="searchBox">
       <form action="Update_val" method="post">
-        <input type="text" placeholder="hackerrank today score" name="hack"><br>
-        <input type="text" placeholder="codechef today score" name="code"><br>
-        <input type="submit" value="ENTER">
+        <input type="text" placeholder="hackerrank today score" name="hack" id="scoreUpdt"><br><br />
+        <input type="text" placeholder="codechef today score" name="code" id="scoreUpdt"><br><br />
+        <input type="submit" value="ENTER" id="scoreupdtBTN">
       </form>
-
-      <%-- <a href="videos.jsp">Videos</a> --%>
+      <br /><br />
     </div>
 
 

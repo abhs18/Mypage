@@ -54,14 +54,14 @@ body{
 
 .searchBox{
   position: absolute;
-  top: 170px;
+  top: 28%;
   left: 80%;
 
-  /*border: 2px;
-  border-color: black;*/
-
- /* margin-left: auto;
-  margin-right: auto;*/
+}
+.hdAddBox{
+  position: absolute;
+  top: 20%;
+  left: 78%;
 }
 
 .searchMail{
@@ -110,21 +110,19 @@ body{
   color: white;
 }
 
-#scoreupdtBTN{
+.rectangle{
   position: absolute;
-
-  left: 28%;
-  background: #57BEA3;
-  border: 0;
-  border-radius: 10px;
-  height: 30px;
-  width: 100px;
-  color: #0A2C38;
-  font-size: 17px;
-  font-weight: 700;
-  text-align: center;
-
+  top: 15%;
+  left: 76%;
+  height: 350px;
+  width: 310px;
+  border: 2px;
+  border-radius: 20px;
+  background: #0E313D;
+  -webkit-box-shadow: 0px 0px 10px 20px rgba(12,74,96,0.91);
+  box-shadow: 3px 2px 15px 13px rgba(12,74,96,0.80);
 }
+
 
 #scoreUpdt{
   text-align: center;
@@ -143,13 +141,23 @@ body{
   opacity: 1;
 }
 
-.rectangle{
+#scoreupdtBTN{
   position: absolute;
-  top: 15%;
-  left: 75%;
-  height: 500px;
-  width: 350px;
-  border: 2px;
-  border-radius: 20px;
-  background-color: #555;
+
+  left: 28%;
+  background: #57BEA3;
+  border: 0;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  color: #0A2C38;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+
+}
+
+#scoreupdtBTN:hover {
+  background-color: #01B9FF;
+  color: white;
 }
