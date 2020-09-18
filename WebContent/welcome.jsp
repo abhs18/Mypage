@@ -48,7 +48,7 @@
         <input type="submit" value="ENTER">
       </form>
 
-      <a href="videos.jsp">Videos</a>
+      <%-- <a href="videos.jsp">Videos</a> --%>
     </div>
 
 

@@ -55,7 +55,7 @@ body{
 .searchBox{
   position: absolute;
   top: 170px;
-  left: 75%;
+  left: 80%;
 
   /*border: 2px;
   border-color: black;*/
@@ -108,4 +108,48 @@ body{
 #searchemailidBTN:hover {
   background-color: #01B9FF;
   color: white;
+}
+
+#scoreupdtBTN{
+  position: absolute;
+
+  left: 28%;
+  background: #57BEA3;
+  border: 0;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  color: #0A2C38;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+
+}
+
+#scoreUpdt{
+  text-align: center;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #173C49;
+  color: white;
+}
+
+#scoreUpdt:hover {
+  background-color: #79D6F7;
+}
+
+#scoreUpdt::placeholder {
+  color: #737B87;
+  opacity: 1;
+}
+
+.rectangle{
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  height: 500px;
+  width: 350px;
+  border: 2px;
+  border-radius: 20px;
+  background-color: #555;
 }
