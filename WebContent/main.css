@@ -12,18 +12,6 @@ body {
   background: #0A2C38;
   /* background: linear-gradient(#141e30, #243b55); */
 }
-.ip1
-{
-  position: absolute;
-  /* position: fixed; */
-  left: 30%;
-  top: 40%;
-}
-
-.ip2{
-  position: absolute;
-
-}
 
 .loginBtn {
   position: absolute;
