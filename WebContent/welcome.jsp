@@ -38,7 +38,7 @@
         <form action="Search" method="post">
           <input type="text" placeholder="Add New Friend" name="id" id="searchemailid">&nbsp &nbsp
           <input type="submit" id="searchemailidBTN" value="Search">
-          
+
         </form>
       </div>
 
@@ -139,7 +139,7 @@
       </table>
 
       <form action="Logout" method="post">
-        <input type="submit" value="Logout">
+        <input type="submit" value="Logout" class="logoutBTN">
       </form>
 
       <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
