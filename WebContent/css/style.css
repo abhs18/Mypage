@@ -46,6 +46,7 @@ body{
 
 #searchemailid:hover {
   background-color: #72D3F9;
+  color: black;
 }
 
 #searchemailid::placeholder {
@@ -85,10 +86,17 @@ body{
   box-shadow: 3px 2px 15px 13px rgba(12,74,96,0.80);
 }
 
-.userScore{
+.userScore h2{
   position: absolute;
   top: 22%;
   left: 80%;
+}
+
+.userScore h4{
+  position: absolute;
+  color: white;
+  top: 29%;
+  left: 78%;
 }
 
 .hdAddBox{
@@ -113,6 +121,7 @@ body{
 
 #scoreUpdt:hover {
   background-color: #79D6F7;
+  color: black;
 }
 
 #scoreUpdt::placeholder {
