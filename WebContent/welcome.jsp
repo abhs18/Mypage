@@ -44,11 +44,11 @@
 
       <div class="rectangle">  </div>
       <div class="userScore">
-        <h2>Your Score:</h2>
+        <h2>YOUR SCORE:</h2>
         <h4>HackerRank: ${u_hackt} <br><br>
         CodeChef: ${u_codet}</h4>
       </div>
-      <h2 class="hdAddBox">Enter New Score!</h2>
+      <h2 class="hdAddBox">ENTER NEW SCORE!</h2>
       <div class="searchBox">
       <form action="Update_val" method="post">
         <input type="text" placeholder="hackerrank today score" name="hack" id="scoreUpdt"><br><br />
