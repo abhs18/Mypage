@@ -171,8 +171,8 @@ body{
 
 .logoutBTN{
   position: absolute;
-  top: 90%;
-  background: #920000;
+  top: 93%;
+  background:red;
   color: white;
   left: 90%;
   width: 120px;
