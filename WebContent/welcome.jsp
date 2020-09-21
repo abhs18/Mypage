@@ -53,7 +53,7 @@
         	  rs3.next();
         %>
 
-        <img src="img/logo.png" class="logoImg" alt="Logo">
+        <img src="img/logo_75x75.png" class="logoImg" alt="Logo">
         <h1 class="headerstyle"> Welcome! <em><%=rs3.getString(1)%></em>,</h1>
 
         <div class="searchMail">
