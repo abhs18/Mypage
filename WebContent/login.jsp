@@ -37,7 +37,7 @@
 
     <body>
       <div id="large-header" class="large-header">
-        <img src="logo.png" class="MPlogoImg" alt="LogoImg">
+        <img src="img/logo.png" class="MPlogoImg" alt="LogoImg">
         <canvas id="demo-canvas"></canvas>
         <div class="login-box">
           <h2>Get Started!</h2>
