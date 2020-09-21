@@ -53,6 +53,7 @@
         	  ResultSet rs3=st3.executeQuery(q3);
         	  rs3.next();
       %>
+      <img src="img/logo.png" class="logoImg" alt="Logo">
       <h1 class="headerstyle"> Welcome! <em><%=rs3.getString(1)%></em>,</h1>
 
       <div class="searchMail">
@@ -86,7 +87,7 @@
       catch(Exception e){
 		      System.out.println(e);}
       %>
-      
+
 
       <table  id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="100%">
         <thead>
