@@ -5,7 +5,7 @@
     <head>
       <meta charset="ISO-8859-1">
       <title>Coder'Stack</title>
-      <link href="${pageContext.request.contextPath}/Coder'Stack_Logo_img.png" type="image" rel="icon" >
+      <link href="${pageContext.request.contextPath}/img/Coder'Stack_Logo_img.png" type="image" rel="icon">
       <%-- <link rel="stylesheet" href="../style.css" type="text/css"> --%>
       <style>
 			   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
