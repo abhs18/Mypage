@@ -57,8 +57,9 @@
                 <input type="password" name="pass" required="">
                 <label>Choose Your Password</label>
             </div>
+            <a class="signinTxt" href="login.jsp">Already have an Account? </a> &nbsp &nbsp &nbsp
             <input class="signupBtn" type="submit" value="SUBMIT">
-        </form>
+          </form>
       </div>
     </div>
 
