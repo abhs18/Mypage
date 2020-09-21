@@ -16,7 +16,7 @@
       function validate()
       {
     	  var name=document.getElementById("text1").value;
-    	  
+
     	  var regex=/^([a-zA-Z0-9]+)@gmail.com$/;
     	//var regex=/^[a-z]$/
     	  if(!regex.test(name))
@@ -28,15 +28,16 @@
     		  {
     		     return true;
     		  }
-    	  
-    	  
+
+
       }
-      
+
       </script>
     </head>
 
     <body>
       <div id="large-header" class="large-header">
+        <img src="img/logo.png" class="MPlogoImg" alt="LogoImg">
         <canvas id="demo-canvas"></canvas>
         <div class="login-box">
           <h2>Get Started!</h2>

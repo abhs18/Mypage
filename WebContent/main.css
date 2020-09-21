@@ -13,6 +13,13 @@ body {
   /* background: linear-gradient(#141e30, #243b55); */
 }
 
+.MPlogoImg{
+  position: absolute;
+  left: 42%;
+  height: 250px;
+  width: 250px;
+}
+
 .loginBtn {
   position: absolute;
   left: 52%;
@@ -32,14 +39,10 @@ body {
   color: white;
 }
 
-.svg{
-  position:absolute;
-}
-
 
 .login-box {
   position: absolute;
-  top: 50%;
+  top: 62%;
   left: 50%;
   width: 500px;
   height: 350px;
