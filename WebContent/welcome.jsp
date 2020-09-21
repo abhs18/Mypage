@@ -12,7 +12,7 @@
       <meta charset="ISO-8859-1">
       <title>Coder'Stack</title>
 
-      <link href="${pageContext.request.contextPath}/img/Coder'Stack_Logo_img.png" type="image" rel="icon" >
+      <link href="${pageContext.request.contextPath}/Coder'Stack_Logo_img.png" type="image" rel="icon" >
       <style>
         @import url('https://use.fontawesome.com/releases/v5.11.2/css/all.css');
         @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
