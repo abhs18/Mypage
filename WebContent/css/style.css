@@ -21,6 +21,12 @@ body{
 
 }
 
+.logoImg{
+  position: absolute;
+  height: 75px;
+  width: 75px;
+}
+
 .headerstyle{
   text-align: left;
   padding-left: 100px;
@@ -29,49 +35,11 @@ body{
   color: powderblue;
 }
 
-.th-sm{
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.thx{
-  font-weight:500;
-  font-size: 20px;
-}
-
-.tbprp{
-  text-align: center;
-  /* position: absolute; */
-  margin-left: auto;
-
-  margin-right: auto;
-  background-color: #0E313D;
-  color: white;
-
-  /* top: 20%;
-  left: 10%; */
-
-}
-
-.searchBox{
-  position: absolute;
-  top: 28%;
-  left: 80%;
-
-}
-.hdAddBox{
-  position: absolute;
-  top: 20%;
-  left: 78%;
-}
-
 .searchMail{
   position: absolute;
   width: auto;
   top: 20px;
   left: 75%;
-
-  /* padding-right: px; */
 }
 
 #searchemailid {
@@ -84,13 +52,13 @@ body{
 
 #searchemailid:hover {
   background-color: #72D3F9;
+  color: black;
 }
 
 #searchemailid::placeholder {
   color: #737B87;
   opacity: 1;
 }
-
 
 #searchemailidBTN{
   position: absolute;
@@ -113,9 +81,9 @@ body{
 
 .rectangle{
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 76%;
-  height: 350px;
+  height: 480px;
   width: 310px;
   border: 2px;
   border-radius: 20px;
@@ -124,6 +92,30 @@ body{
   box-shadow: 3px 2px 15px 13px rgba(12,74,96,0.80);
 }
 
+.userScore h2{
+  position: absolute;
+  top: 22%;
+  left: 80%;
+}
+
+.userScore h4{
+  position: absolute;
+  color: white;
+  top: 29%;
+  left: 78%;
+}
+
+.hdAddBox{
+  position: absolute;
+  top: 46%;
+  left: 77%;
+}
+
+.searchBox{
+  position: absolute;
+  top: 55%;
+  left: 80%;
+}
 
 #scoreUpdt{
   text-align: center;
@@ -135,6 +127,7 @@ body{
 
 #scoreUpdt:hover {
   background-color: #79D6F7;
+  color: black;
 }
 
 #scoreUpdt::placeholder {
@@ -144,7 +137,6 @@ body{
 
 #scoreupdtBTN{
   position: absolute;
-
   left: 28%;
   background: #57BEA3;
   border: 0;
@@ -155,10 +147,41 @@ body{
   font-size: 17px;
   font-weight: 700;
   text-align: center;
-
 }
 
 #scoreupdtBTN:hover {
   background-color: #01B9FF;
   color: white;
+}
+
+.tbprp{
+  text-align: center;
+  /* position: absolute; */
+  margin-left: auto;
+
+  margin-right: auto;
+  background-color: #0E313D;
+  color: white;
+}
+
+.th-sm{
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.logoutBTN{
+  position: absolute;
+  top: 93%;
+  background:red;
+  color: white;
+  left: 90%;
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.logoutBTN:hover{
+  background: #F70606;
+  opacity: 1;
 }

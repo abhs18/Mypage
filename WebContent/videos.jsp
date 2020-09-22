@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>404 error</title>
+<link href="${pageContext.request.contextPath}/Coder'Stack_Logo_img.png?" type="image" rel="icon" >
 <style>
 @import url('"https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap');
 </style>

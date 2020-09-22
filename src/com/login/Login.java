@@ -1,8 +1,8 @@
 package com.login;
 
 import java.io.IOException;
-import java.sql.*;
-import java.sql.DriverManager;
+
+
 import com.logdao.Ldao;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,8 +30,12 @@ public class Login extends HttpServlet {
           }
       	 else
       	 {
-      		response.sendRedirect("login.jsp");
-      		System.out.println("sahi daalo");
+      	  HttpSession session = request.getSession();
+      	  session.setAttribute("wrong_uname_pass", "1");
+      	  response.sendRedirect("login.jsp");
+      		//response.sendRedirect("login.jsp");
+      		//System.out.println("sahi daalo");
+      		
       	 }
 
 

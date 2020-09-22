@@ -12,7 +12,7 @@
       <meta charset="ISO-8859-1">
       <title>Coder'Stack</title>
 
-      <link href="${pageContext.request.contextPath}/img/mdb-favicon.ico" type="image/x-icon" rel="icon" >
+      <link href="Coder'Stack_Logo_img.png?" type="image" rel="icon" >
       <style>
         @import url('https://use.fontawesome.com/releases/v5.11.2/css/all.css');
         @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
@@ -29,35 +29,12 @@
         response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
         if(session.getAttribute("username")==null)
   	      response.sendRedirect("login.jsp");
-        String Name=(String)session.getAttribute("Name");
+        String mail=(String)session.getAttribute("username");
       %>
 
-      <h1 class="headerstyle"> Welcome! <em>${username}</em>, </h1>
-
-      <div class="searchMail">
-        <form action="Search" method="post">
-          <input type="text" placeholder="Add New Friend" name="id" id="searchemailid">&nbsp &nbsp
-          <input type="submit" id="searchemailidBTN" value="Search">
-        </form>
-      </div>
-
-      <div class="rectangle">  </div>
-      <h2 class="hdAddBox">Enter New Score!</h2>
-      <div class="searchBox">
-      <form action="Update_val" method="post">
-        <input type="text" placeholder="hackerrank today score" name="hack" id="scoreUpdt"><br><br />
-        <input type="text" placeholder="codechef today score" name="code" id="scoreUpdt"><br><br />
-        <input type="submit" value="ENTER" id="scoreupdtBTN">
-      </form>
-      <br /><br />
-    </div>
-
-
-      <%
-        String mail=(String)session.getAttribute("username");
-
-
-       try {
+        <%
+       // String mail=(String)session.getAttribute("username");
+        try {
           Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e) {
@@ -66,7 +43,52 @@
         Connection con = null;
         Statement st = null;
         ResultSet rs = null;
-      %>
+        %>
+        <%
+        try{
+        	  con= DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
+        	  Statement st3=con.createStatement();
+        	  String q3="select f_name,hac_total,code_total from proj where email_id="+(char)34+mail+(char)34;
+        	  ResultSet rs3=st3.executeQuery(q3);
+        	  rs3.next();
+        %>
+
+        <img src="img/logo_75x75.png" class="logoImg" alt="Logo" style="position:absolute;">
+        <h1 class="headerstyle"> Welcome! <em><%=rs3.getString(1)%></em>,</h1>
+
+        <div class="searchMail">
+          <form action="Search" method="post">
+            <input type="text" placeholder="Add New Friend" name="id" id="searchemailid">&nbsp &nbsp
+            <input type="submit" id="searchemailidBTN" value="Search">
+          </form>
+        </div>
+
+        <div class="rectangle"> </div>
+        <div class="userScore">
+          <h2>YOUR SCORE:</h2>
+          <h4>HackerRank:<%=rs3.getString(2)%>  <br><br>
+              CodeChef: <%=rs3.getString(3)%>
+          </h4>
+        </div>
+
+        <h2 class="hdAddBox">ENTER NEW SCORE!</h2>
+        <div class="searchBox">
+          <form action="Update_val" method="post">
+            <input type="text" placeholder="hackerrank today score" name="hack" id="scoreUpdt"><br><br />
+            <input type="text" placeholder="codechef today score" name="code" id="scoreUpdt"><br><br />
+            <input type="submit" value="ENTER" id="scoreupdtBTN">
+          </form>
+          <br /><br />
+        </div>
+
+        <%
+          st3.close();
+          con.close();
+        }
+        catch(Exception e){
+		    System.out.println(e);}
+        %>
+
 
       <table  id="dtBasicExample" class="table table-striped table-bordered table-sm tbprp" cellspacing="0" width="100%">
         <thead>
@@ -138,7 +160,7 @@
       </table>
 
       <form action="Logout" method="post">
-        <input type="submit" value="Logout">
+        <input type="submit" value="Logout" class="logoutBTN">
       </form>
 
       <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>

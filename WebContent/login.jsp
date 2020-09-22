@@ -5,7 +5,7 @@
     <head>
       <meta charset="ISO-8859-1">
       <title>Coder'Stack</title>
-
+    <link href="${pageContext.request.contextPath}/Coder'Stack_Logo_img.png?" type="image" rel="icon" >
       <%-- <link rel="stylesheet" href="../style.css" type="text/css"> --%>
       <style>
 			   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
@@ -16,7 +16,7 @@
       function validate()
       {
     	  var name=document.getElementById("text1").value;
-    	  
+
     	  var regex=/^([a-zA-Z0-9]+)@gmail.com$/;
     	//var regex=/^[a-z]$/
     	  if(!regex.test(name))
@@ -28,15 +28,29 @@
     		  {
     		     return true;
     		  }
-    	  
-    	  
-      }
-      
+
+
+     }
+
       </script>
     </head>
 
     <body>
+    <%
+if(session.getAttribute("wrong_uname_pass") != null){
+%>
+<script>
+
+alert("wrong user name or password");
+</script>
+
+<%
+session.removeAttribute("wrong_uname_pass");
+}
+
+%>
       <div id="large-header" class="large-header">
+        <img src="img/logo.png" class="MPlogoImg" alt="LogoImg">
         <canvas id="demo-canvas"></canvas>
         <div class="login-box">
           <h2>Get Started!</h2>

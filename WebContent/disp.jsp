@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User found</title>
+<link href="${pageContext.request.contextPath}/Coder'Stack_Logo_img.png?" type="image" rel="icon" >
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
  </style>
@@ -15,6 +16,12 @@
 response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 if(session.getAttribute("username")==null)
 	response.sendRedirect("login.jsp");
+String mail=(String)session.getAttribute("username");
+String uid=(String)request.getAttribute("uid");
+System.out.println("mail is:"+mail);
+System.out.println("uid is:"+uid);
+if(uid.equals(mail))
+	response.sendRedirect("welcome.jsp");
 %>
 <h1 style="color:powderblue;">
 USER FOUND<br>
@@ -38,7 +45,14 @@ ${u_lname}<br>
  </table>
 
 <form action="Friend" method="post">
-<button type="submit"  value=${uid} name="uid">ADD FRIEND</button>
+<button type="submit" id="btn" onclick="vis()" value=${uid} name="uid" visibility="hidden" >ADD FRIEND</button>
 </form>
 </body>
+<script type="text/javascript">
+function vis()
+{
+	alert("Friend added");
+}
+
+</script>
 </html>

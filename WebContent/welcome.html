@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Trial for Welcome page</title>
   <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/Coder'Stack_Logo_img.png" type="image">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->
@@ -25,7 +25,7 @@
 <body>
 
   <!-- Start your project here-->
-
+  <img src="img/logo_75x75.png" class="logoImg" alt="Logo">
   <h1 class="headerstyle"> Welcome! <em>${username},</em> </h1>
 
 
@@ -35,9 +35,14 @@
       <input type="submit" id="searchemailidBTN" value="Search">
     </form>
   </div>
-  
+
   <div class="rectangle">  </div>
-  <h2 class="hdAddBox">Enter New Score!</h2>
+  <div class="userScore">
+    <h2>YOUR SCORE:</h2>
+    <h4>HackerRank: ${u_hackt} <br><br>
+    CodeChef: ${u_codet}</h4>
+  </div>
+  <h2 class="hdAddBox">ENTER NEW SCORE!</h2>
   <div class="searchBox">
   <form action="Update_val" method="post">
     <input type="text" placeholder="hackerrank today score" name="hack" id="scoreUpdt"><br><br />
@@ -76,7 +81,7 @@
       <td>2009/10/09</td>
       <td>$1,200,000</td>
     </tr>
-    <!-- <tr>
+    <tr>
       <td>Gavin Joyce</td>
       <td>Developer</td>
       <td>Edinburgh</td>
@@ -140,7 +145,7 @@
       <td>2011/05/07</td>
       <td>$145,000</td>
     </tr>
-    <tr>
+<!--     <tr>
       <td>Gavin Cortez</td>
       <td>Team Leader</td>
       <td>San Francisco</td>
@@ -333,7 +338,7 @@
       <td>$112,000</td>
     </tr>
   </tbody>
-  <tfoot>
+  <!-- <tfoot>
     <tr>
       <th>Name
       </th>
@@ -348,9 +353,11 @@
       <th>Salary
       </th>
     </tr>
-  </tfoot>
+  </tfoot> -->
 </table>
-
+<form action="Logout" method="post">
+  <input type="submit" value="LOG-OUT" class="logoutBTN">
+</form>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
