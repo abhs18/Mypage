@@ -36,6 +36,19 @@
     </head>
 
     <body>
+    <%
+if(session.getAttribute("wrong_uname_pass") != null){
+%>
+<script>
+
+alert("wrong user name or password");
+</script>
+
+<%
+session.removeAttribute("wrong_uname_pass");
+}
+
+%>
       <div id="large-header" class="large-header">
         <img src="img/logo.png" class="MPlogoImg" alt="LogoImg">
         <canvas id="demo-canvas"></canvas>
