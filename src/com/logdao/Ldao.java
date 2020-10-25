@@ -126,14 +126,45 @@ public class Ldao
 		  System.out.println(e);
 	  }
 	}
+	public boolean checkfriend(String my_id,String f_id)
+	{
+		String q3="select * from friend where my_mail="+(char)34+my_id+(char)34+" && f_mail="+(char)34+f_id+(char)34;
+		
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+	   		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
+	   		Statement st3=con.createStatement();
+	   	 ResultSet rs3=st3.executeQuery(q3);
+	   	 rs3.next();
+	   	     String a=rs3.getString(1);
+	    	 String b=rs3.getString(2);
+	    	 System.out.println("a is:"+a+"b is"+b);
+	    	 if(a.equals(my_id)&&b.equals(f_id))
+	    		 return true;
+	   	 
+		}
+		catch(Exception e)
+		{
+	   		 System.out.println(e);
+	    }
+
+
+		return false;
+	}
 	public void addf(String my_id,String f_id)
 	{
 		 String query="insert into friend values(?,?)";
+		 
+		 
 	     try {
 	   		 Class.forName("com.mysql.jdbc.Driver");
 	   		 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
-	   	  //   PreparedStatement st=con.PrepareStatement(query);
+	   		
+      	  
+      	 
 	   	  PreparedStatement st=con.prepareStatement(query);
+	   	  
 	   	  st.setString(1,my_id);
 	   	  st.setString(2,f_id);
 	   	     int count=st.executeUpdate();
@@ -148,4 +179,31 @@ public class Ldao
 	}
 
 	
+
+public void delf(String my_id,String f_id)
+{
+	 String query="delete from  friend  where my_mail="+(char)34+my_id+(char)34+" and f_mail="+(char)34+f_id+(char)34;
+	 
+	 
+     try {
+   		 Class.forName("com.mysql.jdbc.Driver");
+   		 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/abhs","root","avrn@18131816");
+   		
+  	  
+  	 
+   	  PreparedStatement st=con.prepareStatement(query);
+   	  
+   	  
+   	     int count=st.executeUpdate();
+   	     System.out.println(count+" row(s) updated");
+   	    st.close();
+   	    con.close();
+   	
+   	    
+	 }
+	 catch(Exception e){
+	   		 System.out.println(e);}
+}
+
+
 }

@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
@@ -45,13 +45,10 @@ ${u_lname}<br>
  </table>
 
 
-<form action="Friend" method="post">
-<button type="submit" id="btn"  value=${uid} name="uid" >ADD FRIEND</button>
+<form action="Remove" method="post">
+<button type="submit" id="btn"  value=${uid} name="uid" >REMOVE FRIEND</button>
 </form>
 
+
 </body>
-<script type="text/javascript">
-
-
-</script>
 </html>

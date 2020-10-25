@@ -26,6 +26,8 @@ public class Search extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		String mail=request.getParameter("id");
+		HttpSession session=request.getSession();
+		 String my_id=(String)session.getAttribute("username");
 		boolean flag=false;
 		String query="select * from proj where email_id="+(char)34+mail+(char)34;
 		 try {
@@ -36,25 +38,55 @@ public class Search extends HttpServlet {
 	   	     
 	   	     if(rs.next())
 	   	     {
-	   	    	 String a=rs.getString(1);
-	   	    	 String b=rs.getString(3);
-	   	    	 String c=rs.getString(4);
-	   	    	 int h_daily=rs.getInt(5);
-	   	    	 int h_total=rs.getInt(6);
-	   	    	 int c_daily=rs.getInt(7);
-	   	    	 int c_total=rs.getInt(8);
-	   	    	//request.setAttribute();
-	   	    	 System.out.println(a+"\n"+b+" "+c);
-	   	    	request.setAttribute("uid",a);
-	   	    	request.setAttribute("u_fname",b);
-	   	    	request.setAttribute("u_lname",c);
-	   	    	request.setAttribute("u_hackd",h_daily);
-	   	    	request.setAttribute("u_hackt",h_total);
-	   	    	request.setAttribute("u_code_d",c_daily);
-	   	    	request.setAttribute("u_codet",c_total);
-	   	    	RequestDispatcher rd=request.getRequestDispatcher("disp.jsp");
-	   	    	rd.forward(request,response);
-	   	    	flag=true;
+	   	    	 Ldao obj=new Ldao();
+	   		     if(obj.checkfriend(my_id,mail))
+	   		     {
+	   		    	 String a=rs.getString(1);
+		   	    	 String b=rs.getString(3);
+		   	    	 String c=rs.getString(4);
+		   	    	 int h_daily=rs.getInt(5);
+		   	    	 int h_total=rs.getInt(6);
+		   	    	 int c_daily=rs.getInt(7);
+		   	    	 int c_total=rs.getInt(8);
+		   	    	//request.setAttribute();
+		   	    	 System.out.println(a+"\n"+b+" "+c);
+		   	    	request.setAttribute("uid",a);
+		   	    	request.setAttribute("u_fname",b);
+		   	    	request.setAttribute("u_lname",c);
+		   	    	request.setAttribute("u_hackd",h_daily);
+		   	    	request.setAttribute("u_hackt",h_total);
+		   	    	request.setAttribute("u_code_d",c_daily);
+		   	    	request.setAttribute("u_codet",c_total);
+		   	    
+		   	    	RequestDispatcher rd=request.getRequestDispatcher("remove.jsp");
+		   	    	rd.forward(request,response);
+		   	    	flag=true;
+	   		     }
+	   		     else
+	   		     {
+	   		    	 String a=rs.getString(1);
+		   	    	 String b=rs.getString(3);
+		   	    	 String c=rs.getString(4);
+		   	    	 int h_daily=rs.getInt(5);
+		   	    	 int h_total=rs.getInt(6);
+		   	    	 int c_daily=rs.getInt(7);
+		   	    	 int c_total=rs.getInt(8);
+		   	    	//request.setAttribute();
+		   	    	 System.out.println(a+"\n"+b+" "+c);
+		   	    	request.setAttribute("uid",a);
+		   	    	request.setAttribute("u_fname",b);
+		   	    	request.setAttribute("u_lname",c);
+		   	    	request.setAttribute("u_hackd",h_daily);
+		   	    	request.setAttribute("u_hackt",h_total);
+		   	    	request.setAttribute("u_code_d",c_daily);
+		   	    	request.setAttribute("u_codet",c_total);
+		   	    
+		   	    	RequestDispatcher rd=request.getRequestDispatcher("disp.jsp");
+		   	    	rd.forward(request,response);
+		   	    	flag=true;
+	   		    	 
+	   		     }
+	   	    	
 	   	     }
 	   	    
 		 }
